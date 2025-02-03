@@ -1,10 +1,16 @@
 use perf_examples::*;
+use rand::Rng;
 
 fn main() {
     let start = std::time::Instant::now();
+    let mut rng = rand::rng();
 
     loop {
-        do_mystery_work(9001);
+        if rng.random_bool(0.5) {
+            do_long_work();
+        } else {
+            do_short_work();
+        }
         if start.elapsed() > std::time::Duration::from_secs(10) {
             break;
         }
