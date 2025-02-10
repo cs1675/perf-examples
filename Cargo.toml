@@ -3,5 +3,8 @@ name = "perf-examples"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+debug = true
+
 [dependencies]
 rand = "0.9"

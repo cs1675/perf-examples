@@ -7,7 +7,7 @@ fn main() {
     let mode = std::env::args()
         .skip(1)
         .next()
-        .expect("want filename argument");
+        .expect("want address argument");
 
     println!("{}", mode);
 
